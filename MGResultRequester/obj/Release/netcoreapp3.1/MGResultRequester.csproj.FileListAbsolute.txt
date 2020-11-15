@@ -1,0 +1,9 @@
+K:\GitHub-Projects\MGResultRequester\MGResultRequester\bin\Release\netcoreapp3.1\MGResultRequester.deps.json
+K:\GitHub-Projects\MGResultRequester\MGResultRequester\bin\Release\netcoreapp3.1\MGResultRequester.dll
+K:\GitHub-Projects\MGResultRequester\MGResultRequester\bin\Release\netcoreapp3.1\MGResultRequester.pdb
+K:\GitHub-Projects\MGResultRequester\MGResultRequester\obj\Release\netcoreapp3.1\MGResultRequester.csprojAssemblyReference.cache
+K:\GitHub-Projects\MGResultRequester\MGResultRequester\obj\Release\netcoreapp3.1\MGResultRequester.AssemblyInfoInputs.cache
+K:\GitHub-Projects\MGResultRequester\MGResultRequester\obj\Release\netcoreapp3.1\MGResultRequester.AssemblyInfo.cs
+K:\GitHub-Projects\MGResultRequester\MGResultRequester\obj\Release\netcoreapp3.1\MGResultRequester.csproj.CoreCompileInputs.cache
+K:\GitHub-Projects\MGResultRequester\MGResultRequester\obj\Release\netcoreapp3.1\MGResultRequester.dll
+K:\GitHub-Projects\MGResultRequester\MGResultRequester\obj\Release\netcoreapp3.1\MGResultRequester.pdb

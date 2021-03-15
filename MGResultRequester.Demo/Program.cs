@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using MGUResultRequester;
 using static MGUResultRequester.MGURequester;
 
 namespace MGUResultRequester.Demo
@@ -21,7 +20,7 @@ namespace MGUResultRequester.Demo
 				}
 
 				Console.WriteLine("Enter Exam code: ");
-				foreach(var val in Enum.GetValues(typeof(ExamCode)))
+				foreach (var val in Enum.GetValues(typeof(ExamCode)))
 				{
 					Console.WriteLine($"{val} - {(int)val}");
 				}
@@ -34,7 +33,7 @@ namespace MGUResultRequester.Demo
 
 				Console.WriteLine("Enter retry count (Default: 100) ");
 
-				if(!int.TryParse(Console.ReadLine(), out int retryCount))
+				if (!int.TryParse(Console.ReadLine(), out int retryCount))
 				{
 					Console.WriteLine("Wrong retry count value.");
 					continue;
@@ -42,13 +41,13 @@ namespace MGUResultRequester.Demo
 
 				Console.WriteLine("Starting requesting process...");
 
-				using(MGURequester client = new MGURequester())
+				using (MGURequester client = new MGURequester())
 				{
 					string htmlResult = await client.GetResult(regNumber, (MGURequester.ExamCode)examCode, retryCount).ConfigureAwait(false);
 
 					if (!string.IsNullOrEmpty(htmlResult))
 					{
-						if(await MGURequester.SaveAsHtmlFileAsync(htmlResult, regNumber).ConfigureAwait(false))
+						if (await MGURequester.SaveAsHtmlFileAsync(htmlResult, regNumber).ConfigureAwait(false))
 						{
 							Console.WriteLine($"Result saved in {regNumber}.html file!");
 						}
@@ -65,7 +64,7 @@ namespace MGUResultRequester.Demo
 					default:
 						return;
 				}
-			}			
+			}
 		}
 	}
 }

@@ -1,8 +1,0 @@
-K:\GitHub-Projects\MGResultRequester\MGResultRequester.Demo\bin\publish\MGResultRequester.Demo.exe
-K:\GitHub-Projects\MGResultRequester\MGResultRequester.Demo\bin\publish\MGResultRequester.Demo.dll
-K:\GitHub-Projects\MGResultRequester\MGResultRequester.Demo\bin\publish\MGResultRequester.Demo.deps.json
-K:\GitHub-Projects\MGResultRequester\MGResultRequester.Demo\bin\publish\MGResultRequester.Demo.runtimeconfig.json
-K:\GitHub-Projects\MGResultRequester\MGResultRequester.Demo\bin\publish\MGResultRequester.Demo.pdb
-K:\GitHub-Projects\MGResultRequester\MGResultRequester.Demo\bin\publish\HtmlAgilityPack.dll
-K:\GitHub-Projects\MGResultRequester\MGResultRequester.Demo\bin\publish\MGResultRequester.dll
-K:\GitHub-Projects\MGResultRequester\MGResultRequester.Demo\bin\publish\MGResultRequester.pdb

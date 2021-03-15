@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MGUResultRequester", "MGResultRequester\MGUResultRequester.csproj", "{E9C5F97E-024C-4657-8D3B-9415F6CED958}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MGUResultRequester.Demo", "MGResultRequester.Demo\MGUResultRequester.Demo.csproj", "{19A82E77-8F37-4AA3-BA0A-0BCE479E078C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9C5F97E-024C-4657-8D3B-9415F6CED958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C5F97E-024C-4657-8D3B-9415F6CED958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C5F97E-024C-4657-8D3B-9415F6CED958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C5F97E-024C-4657-8D3B-9415F6CED958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A82E77-8F37-4AA3-BA0A-0BCE479E078C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A82E77-8F37-4AA3-BA0A-0BCE479E078C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A82E77-8F37-4AA3-BA0A-0BCE479E078C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A82E77-8F37-4AA3-BA0A-0BCE479E078C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A228AFBE-251E-45A5-996F-428CD40F7853}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MGResultRequester.Demo": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}

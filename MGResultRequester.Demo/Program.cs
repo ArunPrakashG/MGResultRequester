@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using MGResultRequester;
+using MGUResultRequester;
+using static MGUResultRequester.MGURequester;
 
-namespace MGResultRequester.Demo
+namespace MGUResultRequester.Demo
 {
 	class Program
 	{
@@ -20,7 +21,7 @@ namespace MGResultRequester.Demo
 				}
 
 				Console.WriteLine("Enter Exam code: ");
-				foreach(var val in Enum.GetValues(typeof(MGResultClient.ExamCode)))
+				foreach(var val in Enum.GetValues(typeof(ExamCode)))
 				{
 					Console.WriteLine($"{val} - {(int)val}");
 				}
@@ -41,13 +42,13 @@ namespace MGResultRequester.Demo
 
 				Console.WriteLine("Starting requesting process...");
 
-				using(MGResultClient client = new MGResultClient())
+				using(MGURequester client = new MGURequester())
 				{
-					string htmlResult = await client.GetResult(regNumber, (MGResultClient.ExamCode)examCode, retryCount).ConfigureAwait(false);
+					string htmlResult = await client.GetResult(regNumber, (MGURequester.ExamCode)examCode, retryCount).ConfigureAwait(false);
 
 					if (!string.IsNullOrEmpty(htmlResult))
 					{
-						if(await client.SaveAsHtmlFile(htmlResult, regNumber).ConfigureAwait(false))
+						if(await MGURequester.SaveAsHtmlFileAsync(htmlResult, regNumber).ConfigureAwait(false))
 						{
 							Console.WriteLine($"Result saved in {regNumber}.html file!");
 						}

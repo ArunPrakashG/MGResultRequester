@@ -4,8 +4,8 @@ Normally, MGU offical site goes down for hours once the result is published. Bas
 This program requests your result onto the server until you get your result in an HTML formate. it will keep on requesting until it receives the response. However you can specify the retry count as well. This process is same as refreshing the result browser tab every second. We are just automating the process.
 
 ### DOWNLOADS
-For windows -> [Click here](https://github.com/ArunPrakashG/MGResultRequester/releases/download/1.0.0.0/MGUResultRequester.Demo.exe)
-For Linux -> [Click here](https://github.com/ArunPrakashG/MGResultRequester/releases/download/1.0.0.0/MGUResultRequester.Demo)
+For windows -> [Click here](https://github.com/ArunPrakashG/MGResultRequester/releases/download/1.1.0.0/MGURequester.exe)
+For Linux -> [Click here](https://github.com/ArunPrakashG/MGResultRequester/releases/download/1.1.0.0/MGURequester)
 
 ### RUNNING
 * Downloads the program corresponding to your OS.

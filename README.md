@@ -11,7 +11,7 @@ For Linux -> [Click here](https://github.com/ArunPrakashG/MGResultRequester/rele
 * Downloads the program corresponding to your OS.
 * If windows, Just double click on the downloaded file, if all is good, it should ask your register number. If you get some error, Download .NET Core Runtime 3.1 from Microsoft site. [Click here for instant redirect](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-3.1.13-windows-x64-installer)
 * If Linux, make sure to install dotnet runtime 3.1 libraries on your machine. (If you are using linux then i am pretty sure you know how to google on installing those libraries)
-After installing it successfully, you can `cd` to the directory where the downloaded file is stored (MGUResultRequester.Demo) and then run `dotnet MGUResultRequester.Demo` or just normal execute it on terminal. make sure to give the file execute permissions before doing so!
+After installing it successfully, you can `cd` to the directory where the downloaded file is stored (MGUResultRequester.Demo) and then run `dotnet MGURequester` or just normal execute it on terminal. make sure to give the file execute permissions before doing so!
 * Once it started, just enter your register number, select your exam which u want to fetch results for, then enter retry count (keep it at 500 >_>) and wait for it finish requesting.
 * The result document will be in .html formate and all u have to do is open the html file in your favarite browser which will display the result like you normally get from their site.
 

@@ -3,10 +3,12 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>1.1.0</Version>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MGResultRequester\MGUResultRequester.csproj" />
+    <PackageReference Include="Sharprompt" Version="2.2.1" />
   </ItemGroup>
 
 </Project>

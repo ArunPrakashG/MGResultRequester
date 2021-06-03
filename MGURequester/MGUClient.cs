@@ -4,19 +4,20 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace MGUResultRequester
+namespace MGURequester
 {
-	public class MGURequester : IDisposable
+	public class MGUClient : IDisposable
 	{
 		private const string URL = "https://117.239.158.204/exQpMgmt/index.php/public/ResultView_ctrl/";
 		private readonly HttpClientHandler ClientHandler;
-		private readonly HttpClient Client;
+		private readonly HttpClient HttpClient;
 		private readonly CookieContainer Cookies = new CookieContainer();
 		private bool IsRequestInProgress;
 
-		public MGURequester(IWebProxy proxy = null)
+		public MGUClient(IWebProxy proxy = null)
 		{
 			ClientHandler = new HttpClientHandler()
 			{
@@ -28,7 +29,7 @@ namespace MGUResultRequester
 				ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }
 			};
 
-			Client = new HttpClient(ClientHandler, false);
+			HttpClient = new HttpClient(ClientHandler, false);
 		}
 
 		private async Task WaitWhileRequestInProgress()
@@ -77,20 +78,17 @@ namespace MGUResultRequester
 						{
 							using (request.Content = new FormUrlEncodedContent(postData))
 							{
-								using (HttpResponseMessage response = await Client.SendAsync(request).ConfigureAwait(false))
+								using (HttpResponseMessage response = await HttpClient.SendAsync(request).ConfigureAwait(false))
 								{
 									if (response.StatusCode == HttpStatusCode.GatewayTimeout)
 									{
-										Console.WriteLine("Request timed out!");
-										Console.WriteLine($"Retry count: {i}");
+										Console.WriteLine($"Request Failed >> Retrying >> {i} / {maxTries}");
 										continue;
 									}
 
 									if (!response.IsSuccessStatusCode)
 									{
-										Debug.WriteLine($"({response.StatusCode}) {response.ReasonPhrase}");
-										Console.WriteLine("Request failed.");
-										Console.WriteLine($"Retry count: {i}");
+										Console.WriteLine($"Request Failed >> Retrying >> {i} / {maxTries}");
 										continue;
 									}
 
@@ -101,8 +99,7 @@ namespace MGUResultRequester
 					}
 					catch (Exception e)
 					{
-						Console.WriteLine(e.Message);
-						Console.WriteLine($"Retry count: {i}");
+						Console.WriteLine($"Request Failed >> Retrying >> {i} / {maxTries}");
 						continue;
 					}
 				}
@@ -134,7 +131,7 @@ namespace MGUResultRequester
 		public void Dispose()
 		{
 			ClientHandler?.Dispose();
-			Client?.Dispose();
+			HttpClient?.Dispose();
 		}
 
 		public enum ExamCode

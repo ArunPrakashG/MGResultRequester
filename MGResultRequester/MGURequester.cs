@@ -151,7 +151,8 @@ namespace MGUResultRequester
 			FirstSemCBCSOct2019 = 24,
 			FifthSemCBCS2017AdmSuppFeb2020 = 27,
 			SixthSemCBCSMar2020 = 29,
-			FourthSemCBCSMarch2020 = 30
+			FourthSemCBCSMarch2020 = 30,
+			SecondSemCBCSOct2020 = 33
 		}
 	}
 }

@@ -1,4 +1,4 @@
-# MGUResultRequester
+# MGUResultRequester [obsolete]
 An application which helps to get your exam results without extra work!
 Normally, MGU offical site goes down for hours once the result is published. Basically, site doesn't go down, the server is unable to process all the requests received from multiple clients at the same time due to its processing limitation. In between this time, there can be a second in which the server is able to process the request.
 This program requests your result onto the server until you get your result in an HTML formate. it will keep on requesting until it receives the response. However you can specify the retry count as well. This process is same as refreshing the result browser tab every second. We are just automating the process.
